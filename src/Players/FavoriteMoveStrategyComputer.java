@@ -38,7 +38,7 @@ public class FavoriteMoveStrategyComputer extends Computer{
 		
 	}
 	
-	private Move getOpponentsFavoriteMove() {
+	public Move getOpponentsFavoriteMove() {
 		Move moveToReturn = null;
 		
 		int rockCount = moveMap.get(MoveUtil.rock);
