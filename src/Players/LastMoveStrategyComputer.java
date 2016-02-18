@@ -15,7 +15,7 @@ public class LastMoveStrategyComputer extends Computer {
 			// this is the first move so let's hardcode it
 			setCurrentMove(MoveUtil.rock);
 		} else {
-			Move moveToBeat = getMoveToBeat(opponentsLastMove);
+			Move moveToBeat = MoveUtil.getMoveToBeat(opponentsLastMove);
 			setCurrentMove(moveToBeat);
 		}		
 	}
@@ -24,17 +24,5 @@ public class LastMoveStrategyComputer extends Computer {
 	public void processEndOfRound(Move move) {
 		opponentsLastMove = move;	
 	}
-
-	public static Move getMoveToBeat(Move move) {
-		Move moveToReturn = null;
-		
-		if (move instanceof Rock) {
-			moveToReturn = MoveUtil.paper;
-		} else if (move instanceof Paper) {
-			moveToReturn = MoveUtil.scissors;
-		} else {
-			moveToReturn = MoveUtil.rock;
-		}
-		return moveToReturn;
-	}	
+	
 }
