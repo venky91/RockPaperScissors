@@ -50,7 +50,7 @@ public class Driver {
 			Move computerCurrentMove = computer.getCurrentMove();
 			Move humanCurrentMove = human.getCurrentMove();
 			
-			sb.append("I chose '").append(humanCurrentMove.getRepresentation()).append("'.");
+			sb.append("I chose '").append(computerCurrentMove.getRepresentation()).append("'.");
 			
 			if (computerCurrentMove == humanCurrentMove) {
 				ties++;
