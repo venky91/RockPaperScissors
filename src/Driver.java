@@ -4,6 +4,7 @@ import Players.Computer;
 import Players.FavoriteMoveStrategyComputer;
 import Players.Human;
 import Players.LastMoveStrategyComputer;
+import Players.RandomMoveStrategyComputer;
 
 
 public class Driver {
@@ -22,7 +23,8 @@ public class Driver {
 		
 		if (args != null && args.length == 1) {
 			String input = args[0];
-			if (input.equalsIgnoreCase("favorite") || input.equalsIgnoreCase("lastmove")) {
+			if (input.equalsIgnoreCase("favorite") || input.equalsIgnoreCase("lastmove")
+					|| input.equalsIgnoreCase("random")) {
 				strategy = input;
 			}
 		}
@@ -31,6 +33,8 @@ public class Driver {
 			computer = new LastMoveStrategyComputer();
 		} else if (strategy.equalsIgnoreCase("favorite")){
 			computer = new FavoriteMoveStrategyComputer();
+		} else if (strategy.equalsIgnoreCase("random")) {
+			computer = new RandomMoveStrategyComputer();
 		}
 		
 		System.out.println("You are playing against strategy '" + strategy + "'");
