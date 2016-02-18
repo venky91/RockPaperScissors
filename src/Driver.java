@@ -27,7 +27,7 @@ public class Driver {
 			}
 		}
 		
-		if (strategy.equals("lastmove")) {
+		if (strategy.equalsIgnoreCase("lastmove")) {
 			computer = new LastMoveStrategyComputer();
 		} else if (strategy.equalsIgnoreCase("favorite")){
 			computer = new FavoriteMoveStrategyComputer();
